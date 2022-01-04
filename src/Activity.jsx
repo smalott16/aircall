@@ -5,7 +5,7 @@ import axios from 'axios';
 
 const Activity = (props) => {
 
-  const { displayMode } = props;
+  const { displayMode, setActivityInspectId } = props;
   const [activity, setActivity] = useState([]);
 
   useEffect(() => {
@@ -33,10 +33,9 @@ const Activity = (props) => {
         return <ActivityItem 
           key={i.id}
           {...i}
+          setActivityInspectId={setActivityInspectId}
         />
       })}
-      
-      
     </div>
   );
 }

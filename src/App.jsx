@@ -5,17 +5,25 @@ import ReactDOM from 'react-dom';
 import Header from './Header.jsx';
 import Nav from './Nav.jsx';
 import Activity from './Activity.jsx';
+import ActivityInformation from './ActivityInformation.jsx';
 
 const App = () => {
 
-  const [displayMode, setDisplayMode] = useState('activity')
+  const [displayMode, setDisplayMode] = useState('activity');
+  const [activityInspectId, setActivityInspectId] = useState(null);
   
   return (
     <main>
       <div className='container'>
         <Header/>
+        {activityInspectId && <ActivityInformation activityInspectId={activityInspectId} />}
         <div className="container-view">
-          <Activity displayMode={displayMode}/>
+          {(displayMode === 'activity' || displayMode === 'archived') &&
+            <Activity 
+              displayMode={displayMode}
+              setActivityInspectId={setActivityInspectId} 
+            />
+          }
         </div>
         <Nav 
           setDisplayMode={setDisplayMode}
