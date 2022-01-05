@@ -7,6 +7,10 @@
   margin-top: 10px
 }
 
+.activity-item:hover {
+  background-color: rgb(225, 222, 222);
+  cursor: pointer;
+}
 
 .activity-header {
   height: 25px;
@@ -16,8 +20,12 @@
   justify-content: space-between
 }
 
+.activity-footer {
+  padding: 5px;
+}
+
 .activity-info {
-  display: none;
+  display: block;
   position: fixed;
   z-index: 1;
   padding-top: 100px;
@@ -34,8 +42,4 @@
   background-color: white;
   margin: 0 auto;
   border-radius: 10px;
-}
-
-.activity-info .clicked {
-  display: block;
 }

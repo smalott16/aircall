@@ -10,7 +10,7 @@ const ActivityItem = (props) => {
         <div className='activity-contact'>{to ? to : "Unknown #"}</div>
         <div className='activity-date'>{created_at}</div>
       </header>
-      <footer>
+      <footer className='activity-footer'>
         {direction}
       </footer>
     </section>

@@ -6,11 +6,17 @@ const Nav = (props) => {
 
   return (
     <div id='bottom-nav'>
-      <button className='nav-button' onClick={() => setDisplayMode('activity')}>Activity</button>
-      <button className='nav-button' onClick={() => setDisplayMode('archived')}>Archived</button>
-      <button className='nav-button' >Dial</button>
-      <button className='nav-button'>Contacts</button>
-      <button className='nav-button'>Laser Cats</button>
+      <div className='nav-button' onClick={() => setDisplayMode('activity')}>
+        <i class="fas fa-list"></i>
+        <br/>
+        <div className='nav-text'>Activity Log</div>
+      </div>
+      <div className='nav-button' ><i class="fas fa-phone"></i></div>
+      <div className='nav-button' onClick={() => setDisplayMode('archived')}>
+        <i class="fas fa-archive"></i>
+        <br/>
+        <div className='nav-text'>Archives</div>
+      </div>
     </div>
   );
 }

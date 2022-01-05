@@ -16,7 +16,7 @@ const App = () => {
     <main>
       <div className='container'>
         <Header/>
-        {activityInspectId && <ActivityInformation activityInspectId={activityInspectId} />}
+        {activityInspectId && <ActivityInformation activityInspectId={activityInspectId} setActivityInspectId={setActivityInspectId} />}
         <div className="container-view">
           {(displayMode === 'activity' || displayMode === 'archived') &&
             <Activity 
